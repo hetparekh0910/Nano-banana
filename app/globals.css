@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar while keeping functionality */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  scrollbar-width: thin;
+}
+
+::selection {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
